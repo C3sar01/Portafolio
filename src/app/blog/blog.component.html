@@ -1,0 +1,32 @@
+<section class="content">
+    <div class="block-content">
+        <h3 class="block-title">Mi Blog</h3>
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div *ngFor="let blox of cv.blog">
+                  <div class="post">
+                    <div class="post-thumbnail">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" [src]="getVideoIframe(blox.src)" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="post-title">
+                        <a href="#"><h2>{{ blox.titulo }}</h2></a>
+                        <p class="post-info">
+                            <span class="post-author">{{ blox.autor }}</span>
+                            <span class="slash"></span>
+                            <span class="post-date">{{ blox.fecha }}</span>
+                            <span class="slash"></span>
+                            <span class="post-catetory">{{ blox.categoria }}</span>
+                        </p>
+                    </div>
+                    <div class="post-body">
+                        <a class="btn" target="_blank" href="{{ blox.url }}">Ver Mas</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
