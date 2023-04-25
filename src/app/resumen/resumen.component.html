@@ -1,7 +1,7 @@
 <section class="content" id="about">
     <div class="block-content">
         <h3 class="block-title">Perfil</h3>
-        <h3 class="subheading">¡Hola! soy César Soto: <strong>Ingeniero en informática empresarial & Desarrollador BackEnd/FrontEnd</strong></h3>
+        <h3 class="subheading"><strong>Ingeniero en informática empresarial & Desarrollador BackEnd/FrontEnd</strong></h3>
         <p>2 años de experiencia. especializado en desarrollo front end y back end. Tengo experiencia con JSON, XML, Java, SpringBoot,JavaScript, Micro Servicios, Angular . Experiencia con trabajo bajo metodologías ágiles</p>
         <div class="info-list row">
             <div class="col-sm-6"><span>Nombre : </span> César Soto</div>
@@ -12,17 +12,22 @@
             <div class="col-sm-6"><span>Interes : </span>Full-Time</div>
         </div>
     </div>
+   
     <div class="block-content">
         <h3 class="block-title">Profesional</h3>
+
         <div *ngFor="let profex of cv.profesional">
-          <label class="progress-bar-label">{{ profex.nombre }}</label>
-          <div class="progress">
-              <div [style.width.%]=profex.valor class="progress-bar" role="progressbar" attr.aria-valuenow="{{ profex.valor }}" aria-valuemin="0" aria-valuemax="100">
-                  <span>{{ profex.valor }}%</span>
-              </div>
-          </div>
-      </div>
+            <label class="progress-bar-label">{{ profex.Nombre }}</label>
+            <div class="progress">
+                <div [style.width.%]=profex.Valor class="progress-bar" role="progressbar" 
+                attr.aria-valuenow="{{ profex.Valor }}" aria-valuemin="0">
+                    <span>{{ profex.Valor }}%</span>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
     <div class="block-content">
         <h3 class="block-title">Experiencia</h3>
         <div class="timeline experience">
@@ -55,7 +60,7 @@
                                 <h4>{{ edux.Nombre }} | <a href="{{ edux.Url }}" target="_blank"><span>Ver Certificado</span></a></h4>
                                 <h5>{{ edux.Fecha }}</h5>
                             </div>
-                            <p>{{ edux.Descripcion }}</p>
+                            <p>{{ edux.Descripcion }}</p> 
                         </div>
                       </div>
                     </div>
@@ -63,7 +68,7 @@
             </div>
         </div>
     </div>
-    <div class="block-content">
+    <!-- <div class="block-content">
         <h3 class="block-title">Servicios</h3>
         <div class="row">
             <div class="col-md-4 col-sm-6 service">
@@ -109,7 +114,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
             </div>
         </div>
-    </div>
+    </div> -->
    <!--  <div class="block-content">
         <h3 class="block-title">Awards</h3>
         <div class="row">
@@ -127,7 +132,7 @@
             </div>
         </div>
     </div> -->
-    <div class="block-content">
+    <!-- <div class="block-content">
         <h3 class="block-title">Testimonios</h3>
         <div class="row">
             <div id="liontestimonial" class="owl-carousel owl-theme">
@@ -142,7 +147,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row text-center">
         <div class="col-md-12 btn-email">
             <a class="btn lowercase">cesar.cssoto@gmail.com</a>
