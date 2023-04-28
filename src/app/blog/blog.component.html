@@ -1,32 +1,64 @@
-<section class="content">
-    <div class="block-content">
-        <h3 class="block-title">Mi Blog</h3>
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                <div *ngFor="let blox of cv.blog">
-                  <div class="post">
-                    <div class="post-thumbnail">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" [src]="getVideoIframe(blox.src)" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="post-title">
-                        <a href="#"><h2>{{ blox.titulo }}</h2></a>
-                        <p class="post-info">
-                            <span class="post-author">{{ blox.autor }}</span>
-                            <span class="slash"></span>
-                            <span class="post-date">{{ blox.fecha }}</span>
-                            <span class="slash"></span>
-                            <span class="post-catetory">{{ blox.categoria }}</span>
-                        </p>
-                    </div>
-                    <div class="post-body">
-                        <a class="btn" target="_blank" href="{{ blox.url }}">Ver Mas</a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
+<section>
+    <h2>Tecnologías que he utilizado</h2>
+    <div class="skill-group">
+      <h3>Lenguajes de programación</h3>
+      <ul class="skill-list">
+        <li class="skill-item java">
+            <img src="../../assets/images/skills/java.png" alt="logo java">
+        </li>
+        <li class="skill-item javascript">
+            <img src="../../assets/images/skills/JavaScript-logo.png" alt="logo javascript">
+        </li>
+        <li class="skill-item python">
+            <img src="../../assets/images/skills/python.png" alt="logo python">
+        </li>
+        <li class="skill-item sql">
+            <img src="../../assets/images/skills/SQL.png" alt="logo sql">
+        </li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Frameworks</h3>
+      <ul class="skill-list">
+        <li class="skill-item springboot">
+            <img src="../../assets/images/skills/spring-boot.png" alt="logo springboot">
+        </li>
+        <li class="skill-item angular">
+            <img src="../../assets/images/skills/Angular.png" alt="logo angular">
+        </li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Herramientas</h3>
+      <ul class="skill-list">
+        <li class="skill-item git">
+            <img src="../../assets/images/skills/Git.png" alt="logo git">
+        </li>
+        <li class="skill-item github">
+            <img src="../../assets/images/skills/GitHub.png" alt="logo github">
+        </li>
+        <li class="skill-item postman">
+            <img src="../../assets/images/skills/Postman.png" alt="logo postman">
+        </li>
+        <li class="skill-item jira">
+            <img src="../../assets/images/skills/Jira.png" alt="logo jira">
+        </li>
+        <li class="skill-item intellij">
+            <img src="../../assets/images/skills/IntelliJ.png" alt="logo intellij">
+        </li>
+        <li class="skill-item springtoolssuite">
+            <img src="../../assets/images/skills/sts.png" alt="logo springtoolssuite">
+        </li>
+        <li class="skill-item vscode">
+            <img src="../../assets/images/skills/visual.png" alt="logo vscode">
+        </li>
+      </ul>
     </div>
   </section>
   
+  <div class="row text-center">
+    <div class="col-md-12 btn-email">
+        <a class="btn lowercase">cesar.cssoto@gmail.com</a>
+    </div>
+</div>
+

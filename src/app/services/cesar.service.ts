@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +13,7 @@ export class CesarService {
   testimonio: any[] = [];
   experiencia: any[] = [];
   blog: any[] = [];
+  proyecto: any[] = [];
 
 
 
@@ -18,7 +21,7 @@ export class CesarService {
     this.CargarProfesional();
     this.CargarEducacion();
     this.CargarExperiencia();
-    // this.CargarBlog();
+    this.CargarProyectos();
   }
 
   private CargarProfesional(){
@@ -37,14 +40,7 @@ export class CesarService {
     });
   }
 
-  // private CargarTestimonio(){
-  //   this.http.get('https://cv-tutorial-70504.firebaseio.com/Testimonio.json')
-  //     .subscribe((resp: any[]) => {
-  //       this.testimonio = resp;
-  //       console.log(resp);
-  //   });
-  // }
-
+ 
   private CargarExperiencia(){
     this.http.get('https://cv-cesar-default-rtdb.firebaseio.com/Experiencia.json')
       .subscribe((resp: any) => {
@@ -53,11 +49,12 @@ export class CesarService {
     });
   }
 
-  // private CargarBlog(){
-  //   this.http.get('https://cv-tutorial-70504.firebaseio.com/Blog.json')
-  //     .subscribe((resp: any[]) => {
-  //       this.blog = resp;
-  //       console.log(resp);
-  //   });
-  // }
+  private CargarProyectos(){
+    this.http.get('https://cv-cesar-default-rtdb.firebaseio.com/Proyectos.json')
+      .subscribe((resp: any) => {
+        this.proyecto = resp;
+        console.log(resp);
+    });
+  }
+
 }
