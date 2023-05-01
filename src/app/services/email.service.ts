@@ -1,45 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
 
-  private sendGridUrl = 'https://api.sendgrid.com/v3/mail/send';
-  private sendGridApiKey = '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';
+  private apiURL = 'http://localhost:3000/send-email';
 
+
+ 
   constructor(private http: HttpClient) { }
 
-  sendEmail(name: string, email: string, message: string) {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + this.sendGridApiKey
-    });
-
-    const data = {
-      personalizations: [
-        {
-          to: [{ email: 'TU_CORREO_ELECTRONICO' }],
-          subject: 'Nuevo mensaje de reclutamiento'
-        }
-      ],
-      from: { email: email, name: name },
-      content: [
-        {
-          type: 'text/html',
-          value: `<p>Nombre: ${name}</p><p>Email: ${email}</p><p>Mensaje: ${message}</p>`
-        }
-      ]
-    };
-
-    this.http.post(this.sendGridUrl, data, { headers }).subscribe(
-      response => {
-        console.log(response);
-      },
-      error => {
-        console.error(error);
-      }
-    );
-  }
+    sendEmail(formData: FormData): Observable<any> {
+      return this.http.post<any>(this.apiURL, formData).pipe(
+        catchError(error => {
+          console.error(error);
+          return of(null);
+        })
+      );
+    }  
+ 
 }
