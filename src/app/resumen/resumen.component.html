@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="exp-holder">
-                        <div *ngFor="let expex of cv.experiencia">
+                        <div *ngFor="let expex of cv.experiencia.slice().reverse()">
                           <div class="exp">
                               <div class="hgroup">
                                   <h4><span>{{ expex.Empresa }}</span> - {{ expex.Cargo }}</h4>
