@@ -7,7 +7,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = 'http://localhost:8080/api/send-email'; // Reemplaza con la URL de tu backend
+  private apiUrl = 'backend-springboot-emails-production.up.railway.app/api/send-email'; // Reemplaza con la URL de tu backend
 
   constructor(private http: HttpClient) { }
 

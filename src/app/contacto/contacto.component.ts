@@ -35,7 +35,7 @@ export class ContactoComponent implements OnInit {
         const message = messageControl.value;
 
         // Enviar los datos al backend
-        const apiUrl = 'http://localhost:8080/api/send-email';
+        const apiUrl = 'backend-springboot-emails-production.up.railway.app/api/send-email';
         const requestBody = {
           name: name,
           email: email,
