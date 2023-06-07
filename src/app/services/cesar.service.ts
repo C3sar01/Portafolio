@@ -28,7 +28,6 @@ export class CesarService {
     this.http.get('https://cv-cesar-default-rtdb.firebaseio.com/Profesional.json')
       .subscribe((resp: any) => {
         this.profesional = resp;
-        console.log(resp);
     });
   }
 
@@ -36,7 +35,6 @@ export class CesarService {
     this.http.get('https://cv-cesar-default-rtdb.firebaseio.com/Educacion.json')
       .subscribe((resp: any) => {
         this.educacion = resp;
-        console.log(resp);
     });
   }
 
@@ -45,7 +43,6 @@ export class CesarService {
     this.http.get('https://cv-cesar-default-rtdb.firebaseio.com/Experiencia.json')
       .subscribe((resp: any) => {
         this.experiencia = resp;
-        console.log(resp);
     });
   }
 
@@ -53,7 +50,6 @@ export class CesarService {
     this.http.get('https://cv-cesar-default-rtdb.firebaseio.com/Proyectos.json')
       .subscribe((resp: any) => {
         this.proyecto = resp;
-        console.log(resp);
     });
   }
 
